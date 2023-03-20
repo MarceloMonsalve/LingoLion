@@ -29,6 +29,18 @@ class ViewModel: ObservableObject {
         }
     }
     
+    // Shortens the array of messages to an acceptable length
+    func shorten() {
+        var numChar = 0
+        for chat in gptChat {
+            numChar = numChar + chat.content.count
+        }
+        while numChar > 4000 {
+            numChar = numChar - gptChat[2].content.count
+            gptChat.remove(at: 2)
+        }
+    }
+    
     // Helper function to change the role to how it will be displayed
     func role(role: String) -> String {
         switch role {
@@ -55,6 +67,10 @@ class ViewModel: ObservableObject {
     
     // Called when the user presses send. Calls apiCall with new response from user and updates chat and gptChat through addMessage accordingly.
     func send(text: String) {
+        if text.count > 500 {
+            self.chat.append("That message was too long, try saying something shorter.")
+            return
+        }
         self.addMessage(role: "user",text: text)
         Task {
             await self.apiCall() { response in
