@@ -7,20 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C0E18F82A081D9500BAD452 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E18F72A081D9500BAD452 /* Utility.swift */; };
 		9C417C3D29B3B2D100BAD64A /* LingoLionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C417C3C29B3B2D100BAD64A /* LingoLionApp.swift */; };
-		9C417C3F29B3B2D100BAD64A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C417C3E29B3B2D100BAD64A /* ContentView.swift */; };
+		9C417C3F29B3B2D100BAD64A /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C417C3E29B3B2D100BAD64A /* ChatView.swift */; };
 		9C417C4129B3B2D300BAD64A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C417C4029B3B2D300BAD64A /* Assets.xcassets */; };
 		9C417C4429B3B2D300BAD64A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C417C4329B3B2D300BAD64A /* Preview Assets.xcassets */; };
 		9C417C4C29B3B2DF00BAD64A /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 9C417C4B29B3B2DF00BAD64A /* OpenAI */; };
+		9CF14B3B29CA39DA0070A022 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF14B3A29CA39DA0070A022 /* ContentView.swift */; };
+		9CF14B4129CA3CB90070A022 /* JurassicPark-BL48.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CF14B4029CA3CB90070A022 /* JurassicPark-BL48.ttf */; };
+		9CF14B4329CA3EE40070A022 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF14B4229CA3EE40070A022 /* F.swift */; };
+		9CF14B4529CA3F820070A022 /* African-l6d.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CF14B4429CA3F820070A022 /* African-l6d.ttf */; };
+		9CF14B4729CA452C0070A022 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF14B4629CA452C0070A022 /* Palette.swift */; };
+		9CF14B4B29CB8A520070A022 /* LanguageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF14B4A29CB8A520070A022 /* LanguageButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C0E18F72A081D9500BAD452 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		9C417C3929B3B2D100BAD64A /* LingoLion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LingoLion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C417C3C29B3B2D100BAD64A /* LingoLionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingoLionApp.swift; sourceTree = "<group>"; };
-		9C417C3E29B3B2D100BAD64A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9C417C3E29B3B2D100BAD64A /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		9C417C4029B3B2D300BAD64A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C417C4329B3B2D300BAD64A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9C417C4D29B3CF3700BAD64A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9CF14B3A29CA39DA0070A022 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9CF14B4029CA3CB90070A022 /* JurassicPark-BL48.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JurassicPark-BL48.ttf"; sourceTree = "<group>"; };
+		9CF14B4229CA3EE40070A022 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
+		9CF14B4429CA3F820070A022 /* African-l6d.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "African-l6d.ttf"; sourceTree = "<group>"; };
+		9CF14B4629CA452C0070A022 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		9CF14B4A29CB8A520070A022 /* LanguageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +68,14 @@
 		9C417C3B29B3B2D100BAD64A /* LingoLion */ = {
 			isa = PBXGroup;
 			children = (
+				9CF14B3F29CA3C8D0070A022 /* Fonts */,
 				9C417C4D29B3CF3700BAD64A /* Info.plist */,
 				9C417C3C29B3B2D100BAD64A /* LingoLionApp.swift */,
-				9C417C3E29B3B2D100BAD64A /* ContentView.swift */,
+				9C417C3E29B3B2D100BAD64A /* ChatView.swift */,
+				9CF14B3A29CA39DA0070A022 /* ContentView.swift */,
+				9CF14B4629CA452C0070A022 /* Palette.swift */,
+				9CF14B4A29CB8A520070A022 /* LanguageButtonView.swift */,
+				9C0E18F72A081D9500BAD452 /* Utility.swift */,
 				9C417C4029B3B2D300BAD64A /* Assets.xcassets */,
 				9C417C4229B3B2D300BAD64A /* Preview Content */,
 			);
@@ -69,6 +88,16 @@
 				9C417C4329B3B2D300BAD64A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9CF14B3F29CA3C8D0070A022 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9CF14B4029CA3CB90070A022 /* JurassicPark-BL48.ttf */,
+				9CF14B4429CA3F820070A022 /* African-l6d.ttf */,
+				9CF14B4229CA3EE40070A022 /* F.swift */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +165,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C417C4429B3B2D300BAD64A /* Preview Assets.xcassets in Resources */,
+				9CF14B4129CA3CB90070A022 /* JurassicPark-BL48.ttf in Resources */,
+				9CF14B4529CA3F820070A022 /* African-l6d.ttf in Resources */,
 				9C417C4129B3B2D300BAD64A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,8 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C417C3F29B3B2D100BAD64A /* ContentView.swift in Sources */,
+				9C0E18F82A081D9500BAD452 /* Utility.swift in Sources */,
+				9CF14B4329CA3EE40070A022 /* F.swift in Sources */,
+				9CF14B4729CA452C0070A022 /* Palette.swift in Sources */,
+				9CF14B4B29CB8A520070A022 /* LanguageButtonView.swift in Sources */,
+				9C417C3F29B3B2D100BAD64A /* ChatView.swift in Sources */,
 				9C417C3D29B3B2D100BAD64A /* LingoLionApp.swift in Sources */,
+				9CF14B3B29CA39DA0070A022 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +317,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LingoLion/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -310,6 +347,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LingoLion/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

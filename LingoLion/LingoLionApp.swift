@@ -11,7 +11,9 @@ import SwiftUI
 struct LingoLionApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+            }
         }
     }
 }
