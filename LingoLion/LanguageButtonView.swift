@@ -26,8 +26,18 @@ struct LanguageButtonView: View {
         }) {
             HStack {
                 Text("\(language)")
+                    .bold()
                 Image(systemName: "chevron.down")
             }
+            .padding(12)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.wood)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.woodShadow, lineWidth: 3)
+                            )
+                    )
         }
         .popover(isPresented: $showingLanguageList, content: {
             List(languages, id: \.self) { language in
@@ -36,9 +46,12 @@ struct LanguageButtonView: View {
                     self.showingLanguageList = false
                 }) {
                     Text(language)
+                        .bold()
                 }
             }
         })
+        .foregroundColor(.darkWood)
+        
     }
 }
 

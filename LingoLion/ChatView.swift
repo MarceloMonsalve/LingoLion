@@ -13,17 +13,17 @@ import OpenAI
 // ViewModel for the main chat with the AI. Keeps track of two chats: one is the one that gets shown to the user and one is the one sent to the api. The api chat must be kept under 2500 tokens (not yet implemented.
 class ViewModel: ObservableObject {
     let openAI: OpenAI
-    var gptChat: [OpenAI.Chat]
+    var gptChat: [Chat]
     @Published var chat: [String]
     
     // Initializes the ViewModel and sends the api an initial "Hello"
     init(systemMessage: String) {
         openAI = OpenAI(apiToken: Plist.getStringValue(forKey: "API_KEY"))
         chat = [String]()
-        gptChat = [.init(role: "system", content: systemMessage), .init(role: "user", content: "Hello"),]
+        gptChat = [.init(role: .system, content: systemMessage), .init(role: .user, content: "Hello"),]
         Task {
             await self.apiCall() { response in
-                self.addMessage(role: "assistant",text: response)
+                self.addMessage(role: .assistant,text: response)
             }
         }
     }
@@ -51,7 +51,7 @@ class ViewModel: ObservableObject {
     
     // Sends gptChat array to the api and if theres an error then it calls it recursively until it works. Sends a string with the chatgpt's response to the completion.
     func apiCall(completion: @escaping (String) -> Void) async {
-        let query = OpenAI.ChatQuery(model: .gpt3_5Turbo, messages: gptChat)
+        let query = ChatQuery(model: .gpt3_5Turbo, messages: gptChat)
         do {
             let result = try await self.openAI.chats(query: query)
             completion((result.choices.first?.message.content ?? "").trimmingCharacters(in: .whitespacesAndNewlines))
@@ -70,16 +70,16 @@ class ViewModel: ObservableObject {
             self.chat.append("That message was too long, try saying something shorter.")
             return
         }
-        self.addMessage(role: "user",text: text)
+        self.addMessage(role: .user,text: text)
         Task {
             await self.apiCall() { response in
-                self.addMessage(role: "assistant", text: response)
+                self.addMessage(role: .assistant, text: response)
             }
         }
     }
     
     // Appends given message to chat and gptChat arrays. Deletes duplicate entries from gptChat and in future will be responsible for keeping gptChat under 2500 tokens.
-    func addMessage(role: String, text: String) {
+    func addMessage(role: Chat.Role, text: String) {
         var i = 0
         for message in self.gptChat {
             if message.content == text && message.role == role {
@@ -90,7 +90,7 @@ class ViewModel: ObservableObject {
         }
         self.gptChat.append(.init(role: role, content: text))
         DispatchQueue.main.async {
-            self.chat.append("\(self.role(role: role)): \(text)")
+            self.chat.append("\(role): \(text)")
         }
         
     }
@@ -107,7 +107,10 @@ struct ChatView: View {
     init(topic: String, language: String) {
 //        self.topic = topic
 //        self.language = language
-        let systemMessage = "You are Lingo Lion a language learning helper that has practice conversations with people learning a new language on various topics. The user says they want to have a conversation about this: \"\(topic)\" in this language: \(language). Act as a character in there senario to have a conversation where you say a sentence and they respond one message at a time. Limit your messages to 80 words or less."
+//        let systemMessage1 = "You are Lingo Lion, a language tutor that acts as a character in a dialogue with the user. Right now the user wants to practice \"\(topic)\" in \(language). For example: if they want to practice getting directions you will play the local and they will play tourist. Have a dialogue where you say a sentence and they respond one message at a time. Limit your messages to 80 words or less."
+        
+        let systemMessage = "You are Lingo Lion a language tutor. You are going to play the role of a character in a dialogue with the user. The senario is \"\(topic)\" in \(language). Your task is to initiate a conversation based on this topic and respond to the user one message at a time. Keep your messages concise and to the point and 80 words or less."
+        
         self.viewModel = ViewModel(systemMessage: systemMessage)
     }
     

@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIApplicationSceneManifest</key>
-	<dict>
-		<key>UIApplicationSupportsMultipleScenes</key>
-		<true/>
-		<key>UISceneConfigurations</key>
-		<dict/>
-	</dict>
+	<key>API_KEY</key>
+	<string>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</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>African-l6d.ttf</string>
+		<string>JurassicPark-BL48.ttf</string>
+	</array>
 </dict>
 </plist>
