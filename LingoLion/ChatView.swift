@@ -20,7 +20,7 @@ class ViewModel: ObservableObject {
     init(systemMessage: String) {
         openAI = OpenAI(apiToken: Plist.getStringValue(forKey: "API_KEY"))
         chat = [String]()
-        gptChat = [.init(role: .system, content: systemMessage), .init(role: .user, content: "Hello"),]
+        gptChat = [.init(role: .system, content: systemMessage), .init(role: .user, content: "Hello. Ask me what I want to practice talking about today."),]
         Task {
             await self.apiCall() { response in
                 self.addMessage(role: .assistant,text: response)
@@ -90,7 +90,7 @@ class ViewModel: ObservableObject {
         }
         self.gptChat.append(.init(role: role, content: text))
         DispatchQueue.main.async {
-            self.chat.append("\(role): \(text)")
+            self.chat.append("\(self.role(role: role.rawValue)): \(text)")
         }
         
     }
@@ -100,43 +100,68 @@ class ViewModel: ObservableObject {
 struct ChatView: View {
     @ObservedObject var viewModel: ViewModel
     @State var text = ""
-//    let topic: String
-//    let language: String
-//    let systemMessage: String
     
-    init(topic: String, language: String) {
+    init(language: String) {
 //        self.topic = topic
 //        self.language = language
 //        let systemMessage1 = "You are Lingo Lion, a language tutor that acts as a character in a dialogue with the user. Right now the user wants to practice \"\(topic)\" in \(language). For example: if they want to practice getting directions you will play the local and they will play tourist. Have a dialogue where you say a sentence and they respond one message at a time. Limit your messages to 80 words or less."
         
-        let systemMessage = "You are Lingo Lion a language tutor. You are going to play the role of a character in a dialogue with the user. The senario is \"\(topic)\" in \(language). Your task is to initiate a conversation based on this topic and respond to the user one message at a time. Keep your messages concise and to the point and 80 words or less."
+        let systemMessage = "You are Lingo Lion a \(language) language tutor that teaches by practicing conversation with the student. When given a topic, play the role of a character in a dialogue with the user. Respond to the user one message at a time keeping your messages concise and 80 words or less. Speak only in in \(language) and do not provide english translations unless asked for by the student."
         
         self.viewModel = ViewModel(systemMessage: systemMessage)
     }
     
     var body: some View {
-        VStack {
-            Text("Lingo Lion")
-                .font(.title)
-            
-            List(viewModel.chat, id: \.self) { message in
-                Text(message)
+        ZStack {
+            Color.sky
+                .ignoresSafeArea()
+            VStack {
+                Circle()
+                    .foregroundColor(.sun)
+                    .frame(width: 150, height: 150)
+                    .position(x: 10, y:10)
+                Spacer()
+                Image("Grass")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
             }
-            Spacer()
-            HStack {
-                TextField("Type here...", text: $text)
-                Button("Send") {
-                    viewModel.send(text: text)
-                    text = ""
+            .ignoresSafeArea()
+            VStack {
+                List(viewModel.chat, id: \.self) { message in
+                    Text(message)
                 }
+                .listStyle(PlainListStyle())
+                .cornerRadius(10)
+                .padding()
+                .padding(.top, 35)
+                
+                Spacer()
+                
+                HStack {
+                    TextField("Type here...", text: $text)
+                        .accentColor(.darkWood)
+                    Button("Send") {
+                        viewModel.send(text: text)
+                        text = ""
+                    }
+                    
+                }
+                .foregroundColor(.darkWood)
+                .padding()
             }
-            .padding()
+            
+            Image("Lion")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 100)
+                .position(x: 300,y:20)
         }
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView(topic: "Ordering Food", language: "French")
+        ChatView(language: "French")
     }
 }

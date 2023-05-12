@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var topic = ""
+//    @State private var topic = ""
     @State private var language = "French"
     var body: some View {
         
@@ -42,7 +42,7 @@ struct ContentView: View {
 //                .padding()
                 
                 HStack {
-                    NavigationLink(destination: ChatView(topic: topic, language: language)) {
+                    NavigationLink(destination: ChatView(language: language)) {
                         Image("Start")
                             .resizable()
                             .scaledToFit()
