@@ -11,9 +11,10 @@ import SwiftUI
 struct LingoLionApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
+            NavigationStack {
                 ContentView()
             }
+            .accentColor(Color.darkWood)
         }
     }
 }

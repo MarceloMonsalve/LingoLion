@@ -10,12 +10,15 @@ import SwiftUI
 struct ContentView: View {
 //    @State private var topic = ""
     @State private var language = "French"
+    @State private var isChatViewActive = false
     var body: some View {
         
         ZStack {
+            
             Color.sky
                 .ignoresSafeArea()
             VStack {
+                
                 Circle()
                     .foregroundColor(.sun)
                     .frame(width: 150, height: 150)
@@ -32,24 +35,16 @@ struct ContentView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding()
-//                TextField("What topic do you want to practice?",
-//                          text: $topic,
-//                          onCommit: {
-//                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-//                })
-//                .lineLimit(3, reservesSpace: true)
-//                .textFieldStyle(.roundedBorder)
-//                .padding()
                 
                 HStack {
-                    NavigationLink(destination: ChatView(language: language)) {
+                    NavigationLink {
+                        ChatView(language: language)
+                    } label: {
                         Image("Start")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 150)
-                            
                     }
-                    
                     LanguageButtonView(language: $language)
                         .padding()
                 }

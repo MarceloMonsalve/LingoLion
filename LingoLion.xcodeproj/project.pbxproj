@@ -14,17 +14,14 @@
 		9C417C4429B3B2D300BAD64A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C417C4329B3B2D300BAD64A /* Preview Assets.xcassets */; };
 		9C417C4C29B3B2DF00BAD64A /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 9C417C4B29B3B2DF00BAD64A /* OpenAI */; };
 		9C6DC69E2A0B76D3004B5933 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DC69D2A0B76D3004B5933 /* Color.swift */; };
-		9C6DC6A42A0C1D7F004B5933 /* Menu.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DC69F2A0C1D7F004B5933 /* Menu.svg */; };
-		9C6DC6A52A0C1D7F004B5933 /* Lion.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DC6A02A0C1D7F004B5933 /* Lion.svg */; };
-		9C6DC6A62A0C1D7F004B5933 /* Grass.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DC6A12A0C1D7F004B5933 /* Grass.svg */; };
-		9C6DC6A72A0C1D7F004B5933 /* Start.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DC6A22A0C1D7F004B5933 /* Start.svg */; };
-		9C6DC6A82A0C1D7F004B5933 /* LingoLion.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DC6A32A0C1D7F004B5933 /* LingoLion.svg */; };
 		9CF14B3B29CA39DA0070A022 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF14B3A29CA39DA0070A022 /* ContentView.swift */; };
 		9CF14B4129CA3CB90070A022 /* JurassicPark-BL48.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CF14B4029CA3CB90070A022 /* JurassicPark-BL48.ttf */; };
 		9CF14B4329CA3EE40070A022 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF14B4229CA3EE40070A022 /* F.swift */; };
 		9CF14B4529CA3F820070A022 /* African-l6d.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CF14B4429CA3F820070A022 /* African-l6d.ttf */; };
-		9CF14B4729CA452C0070A022 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF14B4629CA452C0070A022 /* Palette.swift */; };
 		9CF14B4B29CB8A520070A022 /* LanguageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF14B4A29CB8A520070A022 /* LanguageButtonView.swift */; };
+		9CFB81F42A140FA50018F944 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB81F32A140FA50018F944 /* TextToSpeech.swift */; };
+		9CFB81F62A14707E0018F944 /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB81F52A14707E0018F944 /* LoadingAnimation.swift */; };
+		9CFB81F92A155B810018F944 /* SwiftfulLoadingIndicators in Frameworks */ = {isa = PBXBuildFile; productRef = 9CFB81F82A155B810018F944 /* SwiftfulLoadingIndicators */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,17 +33,13 @@
 		9C417C4329B3B2D300BAD64A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9C417C4D29B3CF3700BAD64A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9C6DC69D2A0B76D3004B5933 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		9C6DC69F2A0C1D7F004B5933 /* Menu.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Menu.svg; sourceTree = "<group>"; };
-		9C6DC6A02A0C1D7F004B5933 /* Lion.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Lion.svg; sourceTree = "<group>"; };
-		9C6DC6A12A0C1D7F004B5933 /* Grass.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Grass.svg; sourceTree = "<group>"; };
-		9C6DC6A22A0C1D7F004B5933 /* Start.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Start.svg; sourceTree = "<group>"; };
-		9C6DC6A32A0C1D7F004B5933 /* LingoLion.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LingoLion.svg; sourceTree = "<group>"; };
 		9CF14B3A29CA39DA0070A022 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9CF14B4029CA3CB90070A022 /* JurassicPark-BL48.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JurassicPark-BL48.ttf"; sourceTree = "<group>"; };
 		9CF14B4229CA3EE40070A022 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
 		9CF14B4429CA3F820070A022 /* African-l6d.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "African-l6d.ttf"; sourceTree = "<group>"; };
-		9CF14B4629CA452C0070A022 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		9CF14B4A29CB8A520070A022 /* LanguageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageButtonView.swift; sourceTree = "<group>"; };
+		9CFB81F32A140FA50018F944 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
+		9CFB81F52A14707E0018F944 /* LoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +48,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C417C4C29B3B2DF00BAD64A /* OpenAI in Frameworks */,
+				9CFB81F92A155B810018F944 /* SwiftfulLoadingIndicators in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,18 +74,18 @@
 		9C417C3B29B3B2D100BAD64A /* LingoLion */ = {
 			isa = PBXGroup;
 			children = (
-				9C6F95672A09DD3B008F4EC5 /* Images */,
 				9CF14B3F29CA3C8D0070A022 /* Fonts */,
 				9C417C4D29B3CF3700BAD64A /* Info.plist */,
 				9C417C3C29B3B2D100BAD64A /* LingoLionApp.swift */,
 				9C417C3E29B3B2D100BAD64A /* ChatView.swift */,
 				9CF14B3A29CA39DA0070A022 /* ContentView.swift */,
-				9CF14B4629CA452C0070A022 /* Palette.swift */,
 				9CF14B4A29CB8A520070A022 /* LanguageButtonView.swift */,
 				9C0E18F72A081D9500BAD452 /* Utility.swift */,
 				9C417C4029B3B2D300BAD64A /* Assets.xcassets */,
 				9C417C4229B3B2D300BAD64A /* Preview Content */,
 				9C6DC69D2A0B76D3004B5933 /* Color.swift */,
+				9CFB81F32A140FA50018F944 /* TextToSpeech.swift */,
+				9CFB81F52A14707E0018F944 /* LoadingAnimation.swift */,
 			);
 			path = LingoLion;
 			sourceTree = "<group>";
@@ -102,18 +96,6 @@
 				9C417C4329B3B2D300BAD64A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		9C6F95672A09DD3B008F4EC5 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				9C6DC6A12A0C1D7F004B5933 /* Grass.svg */,
-				9C6DC6A32A0C1D7F004B5933 /* LingoLion.svg */,
-				9C6DC6A02A0C1D7F004B5933 /* Lion.svg */,
-				9C6DC69F2A0C1D7F004B5933 /* Menu.svg */,
-				9C6DC6A22A0C1D7F004B5933 /* Start.svg */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		9CF14B3F29CA3C8D0070A022 /* Fonts */ = {
@@ -144,6 +126,7 @@
 			name = LingoLion;
 			packageProductDependencies = (
 				9C417C4B29B3B2DF00BAD64A /* OpenAI */,
+				9CFB81F82A155B810018F944 /* SwiftfulLoadingIndicators */,
 			);
 			productName = LingoLion;
 			productReference = 9C417C3929B3B2D100BAD64A /* LingoLion.app */;
@@ -175,6 +158,7 @@
 			mainGroup = 9C417C3029B3B2D100BAD64A;
 			packageReferences = (
 				9C417C4A29B3B2DF00BAD64A /* XCRemoteSwiftPackageReference "OpenAI" */,
+				9CFB81F72A155B810018F944 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */,
 			);
 			productRefGroup = 9C417C3A29B3B2D100BAD64A /* Products */;
 			projectDirPath = "";
@@ -192,12 +176,7 @@
 			files = (
 				9C417C4429B3B2D300BAD64A /* Preview Assets.xcassets in Resources */,
 				9CF14B4129CA3CB90070A022 /* JurassicPark-BL48.ttf in Resources */,
-				9C6DC6A62A0C1D7F004B5933 /* Grass.svg in Resources */,
-				9C6DC6A82A0C1D7F004B5933 /* LingoLion.svg in Resources */,
-				9C6DC6A52A0C1D7F004B5933 /* Lion.svg in Resources */,
 				9CF14B4529CA3F820070A022 /* African-l6d.ttf in Resources */,
-				9C6DC6A72A0C1D7F004B5933 /* Start.svg in Resources */,
-				9C6DC6A42A0C1D7F004B5933 /* Menu.svg in Resources */,
 				9C417C4129B3B2D300BAD64A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,8 +189,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C0E18F82A081D9500BAD452 /* Utility.swift in Sources */,
+				9CFB81F42A140FA50018F944 /* TextToSpeech.swift in Sources */,
 				9CF14B4329CA3EE40070A022 /* F.swift in Sources */,
-				9CF14B4729CA452C0070A022 /* Palette.swift in Sources */,
+				9CFB81F62A14707E0018F944 /* LoadingAnimation.swift in Sources */,
 				9CF14B4B29CB8A520070A022 /* LanguageButtonView.swift in Sources */,
 				9C417C3F29B3B2D100BAD64A /* ChatView.swift in Sources */,
 				9C6DC69E2A0B76D3004B5933 /* Color.swift in Sources */,
@@ -431,6 +411,14 @@
 				kind = branch;
 			};
 		};
+		9CFB81F72A155B810018F944 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulLoadingIndicators.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -438,6 +426,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9C417C4A29B3B2DF00BAD64A /* XCRemoteSwiftPackageReference "OpenAI" */;
 			productName = OpenAI;
+		};
+		9CFB81F82A155B810018F944 /* SwiftfulLoadingIndicators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CFB81F72A155B810018F944 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */;
+			productName = SwiftfulLoadingIndicators;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

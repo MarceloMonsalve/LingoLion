@@ -16,8 +16,21 @@ struct LanguageButtonView: View {
         "French",
         "German",
         "Italian",
-        "Japanese"
-        // Add more languages as needed
+        "Portuguese",
+        "Chinese",
+        "Japanese",
+        "Korean",
+        "Russian",
+        "Arabic",
+        "Dutch",
+        "Swedish",
+        "Norwegian",
+        "Danish",
+        "Finnish",
+        "Polish",
+        "Turkish",
+        "Greek",
+        "Hindi"
     ]
 
     var body: some View {
@@ -40,17 +53,41 @@ struct LanguageButtonView: View {
                     )
         }
         .popover(isPresented: $showingLanguageList, content: {
-            List(languages, id: \.self) { language in
-                Button(action: {
-                    self.language = language
-                    self.showingLanguageList = false
-                }) {
-                    Text(language)
-                        .bold()
+            ZStack {
+                Color.woodShadow
+                    .ignoresSafeArea()
+                ScrollView {
+                    VStack {
+                        Text("Choose Language")
+                            .font(.title)
+                            .bold()
+                        ForEach(languages, id: \.self) { language in
+                            Button(action: {
+                                self.language = language
+                                self.showingLanguageList = false
+                            }) {
+                                HStack {
+                                    Spacer()
+                                    Text(language)
+                                        .bold()
+                                        .padding(.vertical,10)
+                                    Spacer()
+                                }
+                                .background(Color.wood)
+                                .cornerRadius(10)
+                                .padding(.horizontal)
+                                
+                            }
+                        }
+                        Spacer()
+                    }
+                    .padding(.top)
                 }
+                
             }
         })
         .foregroundColor(.darkWood)
+        
         
     }
 }
