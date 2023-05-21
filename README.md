@@ -20,7 +20,7 @@ I designed the UI in Adobe Illustrator and coded it in Swift in XCode. Here is a
 
 ## Future updates
 
-Currently I am working on a vocabulary section with flashcards and making the AI adjust its difficulty depending on what the users language level is.
+Future updates a vocabulary section with flashcards and having difficulty setting depending on what the users language level is.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
